@@ -52,3 +52,9 @@ jar {
 checkstyle {
   toolVersion = '7.6'
 }
+
+tasks.withType(Checkstyle) {
+  reports {
+    html.destination rootProject.file("build/reports/checkstyle.html")
+  }
+}
